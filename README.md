@@ -21,22 +21,18 @@ npm  install express mongoose
 ## Demo
 
 ### Setup and Start
-![DB setup and start](./demo/01-startApplication.gif)
+![DB setup and start](./demo/start-server.gif)
 
-### GET all
-![GET all](./demo/02-GET-routes.gif)
+### User Routes
+![User Routes](./demo/user-routes.gif)
 
-### GET by ID
-![GET by ID](./demo/03-GET-routes-single.gif)
+### Add and Remove Friend
+![Add and remove friend](./demo/friend-routes.gif)
 
-### POST, PUT, DELETE Categories
-![POST, GET, DELETE Categories](./demo/04-categoryRoutes.gif)
+### Thought Routes
+![Thought Routes](./demo/thought-routes.gif)
 
-### POST, PUT, DELETE Products
-![POST, GET, DELETE Products](./demo/05-productRoutes.gif)
-
-### POST, PUT, DELETE Tags
-![POST, GET, DELETE Tags](./demo/06-tagRoutes.gif)
+*Reaction demo video available in demo folder*
 
 ## Built With
 - Express.js
