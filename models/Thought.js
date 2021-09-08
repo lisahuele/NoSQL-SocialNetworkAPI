@@ -24,6 +24,13 @@ const ReactionSchema = new Schema (
             default: Date.now,
             get: createdAtVal => dateFormat(createdAtVal)
         }
+    },
+    {
+        toJSON: {
+            getters: true,
+            virtuals: true
+        },
+        id: false
     }
 )
 
@@ -57,9 +64,12 @@ const ThoughtSchema = new Schema (
         id: false
         
     }
-)
+);
 
-//reactionCount virtual that retrieves the length of the user's friends array field on query
+ThoughtSchema.virtual('reactionCount').get(function() {
+    return this.reactions.length;
+})
+
 
 const Thought = model('Thought', ThoughtSchema);
 
