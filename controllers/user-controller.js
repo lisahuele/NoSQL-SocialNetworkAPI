@@ -1,4 +1,4 @@
-const { User } = require('../models');
+const { User, Thought } = require('../models');
 
 const userController = {
     //get all users
@@ -9,9 +9,9 @@ const userController = {
             select: '-__v'
         })
         .select('-__v')
-        .sort({ _id: -1 })
-        .then(dbUserData => { res.json(dbUserData) })
-        .catch(err => { res.status(400).json(err) })
+        .sort({ username: 1 })
+        .then(dbUserData => res.json(dbUserData))
+        .catch(err => res.status(400).json(err))
     },
     //get user by id
     getUserById({ params }, res) {
