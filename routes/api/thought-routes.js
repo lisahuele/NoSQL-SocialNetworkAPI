@@ -1,20 +1,28 @@
 const router = require('express').Router();
-// const { controller methods } = require();
+const { 
+    getAllThoughts,
+    getThoughtById,
+    addThought,
+    updateThought,
+    removeThought,
+    addReaction,
+    removeReaction
+ } = require('../../controllers/thought-controller');
 
 router
     .route('/')
-    .get()
-    .post();
+    .get(getAllThoughts)
+    .post(addThought);
 
 router
     .route('/:id')
-    .get()
-    .put()
-    .delete();
+    .get(getThoughtById)
+    .put(updateThought)
+    .delete(removeThought);
 
 router
     .route('/:thoughtId/:reactions')
-    .post()
-    .delete();
+    .post(addReaction)
+    .delete(removeReaction);
 
 module.exports = router;
